@@ -3,7 +3,7 @@
 Este proyecto es una **API REST en Spring Boot** que implementa un mantenedor de libros.  
 Los datos se almacenan en una **lista en memoria** (sin base de datos ni JPA).  
 
-Proyecto creado con: (Spring Initializr)[https://start.spring.io/]
+Proyecto creado con: Spring Initializr [https://start.spring.io/]
 
 ## 🚀 Características
 - Crear, listar, actualizar y eliminar libros.
@@ -25,7 +25,6 @@ Proyecto creado con: (Spring Initializr)[https://start.spring.io/]
    ```
 
 2. Compilar e iniciar el proyecto:
-
   ```bash
   mvn spring-boot:run
   ```
@@ -40,7 +39,6 @@ Proyecto creado con: (Spring Initializr)[https://start.spring.io/]
 3. Crear un nuevo libro: POST /api/libros
 
 Ejemplos: Request Body 
-
 ```json
 {
   "titulo": "El Principito",
