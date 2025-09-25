@@ -12,8 +12,8 @@ Proyecto creado con: Spring Initializr [https://start.spring.io/]
 - Datos persistidos solo en memoria (se reinician al detener la app).
 
 ## 🛠️ Tecnologías
-- Java 17+
-- Spring Boot 3.x
+- Java 21
+- Spring Boot 3.5.6
 - Maven
 - Postman (para pruebas)
 
