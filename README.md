@@ -17,21 +17,6 @@ Proyecto creado con: Spring Initializr [https://start.spring.io/]
 - Maven
 - Postman (para pruebas)
 
-## 📦 Instalación
-1. Clonar el repositorio:
-   ```bash
-   git clone https://github.com/tu-usuario/mantenedor-libros.git
-   cd mantenedor-libros
-   ```
-
-2. Compilar e iniciar el proyecto:
-  ```bash
-  mvn spring-boot:run
-  ```
-
-3. La API estará disponible en: http://localhost:8080/api/libros
-
-
 ## 📑 Endpoints
 
 1. Listar todos los libros: GET /api/libros
