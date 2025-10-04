@@ -7,9 +7,10 @@ Proyecto creado con: Spring Initializr [https://start.spring.io/]
 
 ## 🚀 Características
 - Crear, listar, actualizar y eliminar libros.
-- Manejo de capa `Service` y `Controller`.
+- Manejo de capa `Repository`, `Service` y `Controller`.
 - Uso correcto de códigos HTTP.
-- Datos persistidos solo en memoria (se reinician al detener la app).
+- En rama master: Datos persistidos en BD PostgresSQL. Script para creación de tablas en `resources/static/script_bd.sql`
+- En rama sin_persistencia: Datos persistidos solo en memoria (se reinician al detener la app).
 
 ## 🛠️ Tecnologías
 - Java 21
