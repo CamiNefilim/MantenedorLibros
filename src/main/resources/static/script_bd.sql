@@ -4,10 +4,10 @@ CREATE TABLE IF NOT EXISTS public.categorias
     nombre TEXT NOT NULL
 );
 
-INSERT INTO public.categorias(categoria) VALUES ('Juvenil', true);
-INSERT INTO public.categorias(categoria) VALUES ('Terror', true);
-INSERT INTO public.categorias(categoria) VALUES ('Ficción', true);
-INSERT INTO public.categorias(categoria) VALUES ('Novela', true);
+INSERT INTO public.categorias(nombre) VALUES ('Juvenil');
+INSERT INTO public.categorias(nombre) VALUES ('Terror');
+INSERT INTO public.categorias(nombre) VALUES ('Ficción');
+INSERT INTO public.categorias(nombre) VALUES ('Novela');
 COMMIT;
 
 CREATE TABLE IF NOT EXISTS public.libros
