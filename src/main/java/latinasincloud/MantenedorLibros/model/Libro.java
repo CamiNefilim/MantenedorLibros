@@ -1,17 +1,32 @@
 package latinasincloud.MantenedorLibros.model;
 
-public class Libro {
+import jakarta.persistence.*;
 
+@Entity
+@Table(name = "libros")
+public class Libro {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+
+    @Column(nullable = false)
     private String titulo;
-    private String categoria;
+
+    @ManyToOne
+    @JoinColumn(name = "categoria_id", nullable = false) // FK hacia Categoria
+    private Categoria categoria;
+
     private int anioPublicacion;
     private String autor;
 
     public Libro(){}
 
-    public void setId(int id) {
+    public Libro(int id, String titulo, Categoria categoria, int anioPublicacion, String autor) {
         this.id = id;
+        this.titulo = titulo;
+        this.categoria = categoria;
+        this.anioPublicacion = anioPublicacion;
+        this.autor = autor;
     }
 
     public int getId() {
@@ -26,11 +41,11 @@ public class Libro {
         this.titulo = titulo;
     }
 
-    public String getCategoria() {
+    public Categoria getCategoria() {
         return categoria;
     }
 
-    public void setCategoria(String categoria) {
+    public void setCategoria(Categoria categoria) {
         this.categoria = categoria;
     }
 
