@@ -9,6 +9,7 @@ Proyecto creado con: Spring Initializr [https://start.spring.io/]
 - Crear, listar, actualizar y eliminar libros.
 - Manejo de capa `Repository`, `Service` y `Controller`.
 - Uso correcto de códigos HTTP.
+- Aplica seguridad básica con roles Administrador y Usuario.
 - En rama master: Datos persistidos en BD PostgresSQL. Script para creación de tablas en `resources/static/script_bd.sql`
 - En rama sin_persistencia: Datos persistidos solo en memoria (se reinician al detener la app).
 
