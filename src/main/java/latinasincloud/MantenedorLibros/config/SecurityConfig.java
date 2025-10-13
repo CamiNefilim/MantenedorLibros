@@ -1,8 +1,11 @@
 package latinasincloud.MantenedorLibros.config;
 
+import latinasincloud.MantenedorLibros.service.UsuarioService;
+import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
+import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
 import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.core.userdetails.User;
@@ -27,7 +30,7 @@ public class SecurityConfig {
         return new BCryptPasswordEncoder();
     }
 
-    //Usuarios en memoria
+    /*Usuarios en memoria
     @Bean
     public UserDetailsService userDetailsService(PasswordEncoder passwordEncoder) {
         UserDetails admin = User.withUsername("admin")
@@ -41,6 +44,14 @@ public class SecurityConfig {
                 .build();
 
         return new InMemoryUserDetailsManager(admin, user);
+    } */
+
+    @Bean
+    public DaoAuthenticationProvider authenticationProvider(UsuarioService userDetailsService) {
+        DaoAuthenticationProvider authProvider = new DaoAuthenticationProvider();
+        authProvider.setUserDetailsService(userDetailsService);
+        authProvider.setPasswordEncoder(passwordEncoder());
+        return authProvider;
     }
 
     //Configuración del filtro de seguridad
@@ -62,4 +73,13 @@ public class SecurityConfig {
             .httpBasic(basic -> {});
         return http.build();
     }
+    /* Este metodo genera contraseña encriptada con BCrypt
+    @Bean
+    public CommandLineRunner generatePasswords() {
+        return args -> {
+            System.out.println("admin123 -> " + new BCryptPasswordEncoder().encode("admin123"));
+            System.out.println("user123 -> " + new BCryptPasswordEncoder().encode("user123"));
+        };
+    }
+     */
 }
