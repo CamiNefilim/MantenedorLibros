@@ -29,6 +29,10 @@ public class Libro {
         this.autor = autor;
     }
 
+    public void setId(int id) {
+        this.id = id;
+    }
+
     public int getId() {
         return id;
     }
