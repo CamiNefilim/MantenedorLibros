@@ -41,6 +41,7 @@ public class LibroServiceTest {
     private Libro libro;
     private Categoria categoria;
 
+    //@BeforeEach: Indica que este método se ejecutará antes de cada prueba (@Test) en la clase.
     @BeforeEach
     void setUp() {
         MockitoAnnotations.openMocks(this); // Inicializa los mocks
